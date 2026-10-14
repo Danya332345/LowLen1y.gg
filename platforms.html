@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LowLen1y.gg — Все платформы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= ШАПКА ================= -->
+<header class="header">
+    <div class="container header__inner">
+        <a href="index.html" class="logo">
+            <span class="logo__icon">&lt;/&gt;</span>
+            <span class="logo__text">LowLen1y<span class="accent">.gg</span></span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html" class="nav__link" data-i18n="nav.home">Главная</a>
+            <a href="platforms.html" class="nav__link nav__link--active" data-i18n="nav.platforms">Платформы</a>
+            <a href="tips.html" class="nav__link" data-i18n="nav.tips">Советы новичку</a>
+        </nav>
+
+        <div class="lang-switch">
+            <button class="lang-btn lang-btn--active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<!-- ================= ЗАГОЛОВОК КАТАЛОГА ================= -->
+<section class="catalog-header">
+    <div class="container">
+        <h1 class="section-title" data-i18n="catalog.title">Все платформы для разработки игр</h1>
+        <p class="section-subtitle" data-i18n="catalog.subtitle">
+            Полный список движков с поиском, фильтрами и сортировкой. Выбери подходящий и изучи его подробнее.
+        </p>
+    </div>
+</section>
+
+<!-- ================= ПАНЕЛЬ УПРАВЛЕНИЯ ================= -->
+<section class="catalog-controls">
+    <div class="container">
+
+        <!-- Поиск -->
+        <div class="search-box">
+            <span class="search-box__icon">🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                class="search-box__input"
+                placeholder="Поиск по названию..."
+                data-i18n-placeholder="catalog.search"
+            >
+        </div>
+
+        <!-- Фильтры -->
+        <div class="filters">
+            <div class="filters__group">
+                <span class="filters__label" data-i18n="catalog.type">Тип:</span>
+                <button class="filter-btn filter-btn--active" data-filter="type" data-value="all" data-i18n="catalog.all">Все</button>
+                <button class="filter-btn" data-filter="type" data-value="2d">2D</button>
+                <button class="filter-btn" data-filter="type" data-value="3d">3D</button>
+                <button class="filter-btn" data-filter="type" data-value="mobile" data-i18n="catalog.mobile">Мобильные</button>
+            </div>
+
+            <div class="filters__group">
+                <span class="filters__label" data-i18n="catalog.price">Цена:</span>
+                <button class="filter-btn filter-btn--active" data-filter="price" data-value="all" data-i18n="catalog.all">Все</button>
+                <button class="filter-btn" data-filter="price" data-value="free" data-i18n="catalog.free">Бесплатные</button>
+                <button class="filter-btn" data-filter="price" data-value="paid" data-i18n="catalog.paid">Платные</button>
+            </div>
+
+            <div class="filters__group">
+                <span class="filters__label" data-i18n="catalog.difficulty">Сложность:</span>
+                <button class="filter-btn filter-btn--active" data-filter="difficulty" data-value="all" data-i18n="catalog.all">Все</button>
+                <button class="filter-btn" data-filter="difficulty" data-value="easy" data-i18n="catalog.easy">Для новичков</button>
+                <button class="filter-btn" data-filter="difficulty" data-value="medium" data-i18n="catalog.medium">Средняя</button>
+                <button class="filter-btn" data-filter="difficulty" data-value="hard" data-i18n="catalog.hard">Для опытных</button>
+            </div>
+        </div>
+
+        <!-- Сортировка -->
+        <div class="sort-box">
+            <label for="sortSelect" class="sort-box__label" data-i18n="catalog.sort">Сортировка:</label>
+            <select id="sortSelect" class="sort-box__select">
+                <option value="name-asc" data-i18n="catalog.sortNameAsc">Название (А-Я)</option>
+                <option value="name-desc" data-i18n="catalog.sortNameDesc">Название (Я-А)</option>
+                <option value="difficulty-asc" data-i18n="catalog.sortDiffAsc">Сложность (легко → сложно)</option>
+                <option value="difficulty-desc" data-i18n="catalog.sortDiffDesc">Сложность (сложно → легко)</option>
+            </select>
+        </div>
+
+        <!-- Счётчик найденных карточек -->
+        <p class="catalog-counter">
+            <span data-i18n="catalog.found">Найдено:</span>
+            <span id="resultCount">10</span>
+        </p>
+
+    </div>
+</section>
+
+<!-- ================= СЕТКА КАРТОЧЕК ================= -->
+<section class="engines">
+    <div class="container">
+        <div class="engines__grid" id="enginesGrid">
+
+            <!-- Unity -->
+            <a href="engines/unity.html" class="card"
+               data-name="Unity"
+               data-type="2d 3d mobile"
+               data-price="free paid"
+               data-difficulty="medium">
+                <div class="card__logo"><span class="card__logo-letter">U</span></div>
+                <h3 class="card__title">Unity</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.unity">Универсальный движок для 2D и 3D. Язык: C#. Подходит для мобильных и ПК-игр.</p>
+                </div>
+            </a>
+
+            <!-- Unreal Engine -->
+            <a href="engines/unreal.html" class="card"
+               data-name="Unreal Engine"
+               data-type="3d"
+               data-price="free paid"
+               data-difficulty="hard">
+                <div class="card__logo"><span class="card__logo-letter">UE</span></div>
+                <h3 class="card__title">Unreal Engine</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.unreal">Мощный 3D-движок от Epic Games. Язык: C++ и Blueprints. Для AAA-проектов.</p>
+                </div>
+            </a>
+
+            <!-- Godot -->
+            <a href="engines/godot.html" class="card"
+               data-name="Godot"
+               data-type="2d 3d"
+               data-price="free"
+               data-difficulty="easy">
+                <div class="card__logo"><span class="card__logo-letter">G</span></div>
+                <h3 class="card__title">Godot</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.godot">Полностью бесплатный движок с открытым кодом. Язык: GDScript. Отлично для новичков.</p>
+                </div>
+            </a>
+
+            <!-- GameMaker -->
+            <a href="engines/gamemaker.html" class="card"
+               data-name="GameMaker"
+               data-type="2d"
+               data-price="paid"
+               data-difficulty="easy">
+                <div class="card__logo"><span class="card__logo-letter">GM</span></div>
+                <h3 class="card__title">GameMaker</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.gamemaker">Движок для 2D-игр. Язык: GML. Простой старт, подходит для инди-проектов.</p>
+                </div>
+            </a>
+
+            <!-- Construct 3 -->
+            <a href="engines/construct.html" class="card"
+               data-name="Construct 3"
+               data-type="2d"
+               data-price="free paid"
+               data-difficulty="easy">
+                <div class="card__logo"><span class="card__logo-letter">C3</span></div>
+                <h3 class="card__title">Construct 3</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.construct">Визуальный конструктор 2D-игр. Программирование не требуется. Работает в браузере.</p>
+                </div>
+            </a>
+
+            <!-- RPG Maker -->
+            <a href="engines/rpgmaker.html" class="card"
+               data-name="RPG Maker"
+               data-type="2d"
+               data-price="paid"
+               data-difficulty="easy">
+                <div class="card__logo"><span class="card__logo-letter">RPG</span></div>
+                <h3 class="card__title">RPG Maker</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.rpgmaker">Специализированный движок для японских ролевых игр. Минимум программирования.</p>
+                </div>
+            </a>
+
+            <!-- CryEngine -->
+            <a href="engines/cryengine.html" class="card"
+               data-name="CryEngine"
+               data-type="3d"
+               data-price="paid"
+               data-difficulty="hard">
+                <div class="card__logo"><span class="card__logo-letter">CE</span></div>
+                <h3 class="card__title">CryEngine</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.cryengine">Профессиональный 3D-движок с фотореалистичной графикой. Язык: C++ и Lua.</p>
+                </div>
+            </a>
+
+            <!-- Defold -->
+            <a href="engines/defold.html" class="card"
+               data-name="Defold"
+               data-type="2d mobile"
+               data-price="free"
+               data-difficulty="medium">
+                <div class="card__logo"><span class="card__logo-letter">D</span></div>
+                <h3 class="card__title">Defold</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.defold">Лёгкий бесплатный движок для 2D. Язык: Lua. Хорошо подходит для мобильных игр.</p>
+                </div>
+            </a>
+
+            <!-- GDevelop -->
+            <a href="engines/gdevelop.html" class="card"
+               data-name="GDevelop"
+               data-type="2d mobile"
+               data-price="free"
+               data-difficulty="easy">
+                <div class="card__logo"><span class="card__logo-letter">GD</span></div>
+                <h3 class="card__title">GDevelop</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.gdevelop">Бесплатный конструктор без кода. Идеален для самых первых проектов.</p>
+                </div>
+            </a>
+
+            <!-- Stencyl -->
+            <a href="engines/stencyl.html" class="card"
+               data-name="Stencyl"
+               data-type="2d mobile"
+               data-price="free paid"
+               data-difficulty="easy">
+                <div class="card__logo"><span class="card__logo-letter">S</span></div>
+                <h3 class="card__title">Stencyl</h3>
+                <div class="card__hover">
+                    <p data-i18n="card.stencyl">Визуальная среда для 2D-игр на основе блоков. Лёгкий старт без кода.</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Сообщение, если ничего не найдено -->
+        <p id="noResults" class="catalog-empty" style="display:none;" data-i18n="catalog.empty">
+            Ничего не найдено. Попробуй изменить фильтры.
+        </p>
+    </div>
+</section>
+
+<!-- ================= ПОДВАЛ ================= -->
+<footer class="footer">
+    <div class="container">
+        <p data-i18n="footer.text">LowLen1y.gg — учебный проект по МДК 02.01</p>
+        <p class="footer__small">© 2025 LowLen1y.gg</p>
+    </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+<script src="js/filter.js"></script>
+</body>
+</html>
