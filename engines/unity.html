@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LowLen1y.gg — Unity</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= ШАПКА ================= -->
+<header class="header">
+    <div class="container header__inner">
+        <a href="../index.html" class="logo">
+            <span class="logo__icon">&lt;/&gt;</span>
+            <span class="logo__text">LowLen1y<span class="accent">.gg</span></span>
+        </a>
+
+        <nav class="nav">
+            <a href="../index.html" class="nav__link" data-i18n="nav.home">Главная</a>
+            <a href="../platforms.html" class="nav__link nav__link--active" data-i18n="nav.platforms">Платформы</a>
+            <a href="../tips.html" class="nav__link" data-i18n="nav.tips">Советы новичку</a>
+        </nav>
+
+        <div class="lang-switch">
+            <button class="lang-btn lang-btn--active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+</header>
+
+<!-- ================= ЗАГОЛОВОК ДВИЖКА ================= -->
+<section class="engine-hero">
+    <div class="container">
+        <a href="../platforms.html" class="back-link" data-i18n="engine.back">← Назад к списку</a>
+
+        <div class="engine-hero__inner">
+            <div class="engine-hero__logo">
+                <span>U</span>
+            </div>
+            <div>
+                <h1 class="engine-hero__title">Unity</h1>
+                <p class="engine-hero__subtitle" data-i18n="unity.subtitle">
+                    Универсальный движок для 2D и 3D-игр от Unity Technologies
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ОСНОВНОЙ КОНТЕНТ ================= -->
+<section class="engine-content">
+    <div class="container">
+
+        <!-- Описание -->
+        <div class="engine-block">
+            <h2 class="engine-block__title" data-i18n="engine.about">Описание</h2>
+            <p class="engine-block__text" data-i18n="unity.about">
+                Unity — один из самых популярных игровых движков в мире. На нём созданы тысячи игр для ПК, мобильных устройств, консолей и веб-браузеров. Движок поддерживает как 2D, так и 3D-графику, имеет мощный редактор и огромное сообщество. Основной язык программирования — C#. Unity отлично подходит как для инди-разработчиков, так и для крупных студий.
+            </p>
+        </div>
+
+        <!-- Характеристики -->
+        <div class="engine-block">
+            <h2 class="engine-block__title" data-i18n="engine.specs">Характеристики</h2>
+            <div class="specs">
+                <div class="specs__row">
+                    <span class="specs__key" data-i18n="engine.developer">Разработчик</span>
+                    <span class="specs__value">Unity Technologies</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key" data-i18n="engine.type">Тип</span>
+                    <span class="specs__value">2D / 3D</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key" data-i18n="engine.language">Язык программирования</span>
+                    <span class="specs__value">C#</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key" data-i18n="engine.price">Цена</span>
+                    <span class="specs__value" data-i18n="unity.price">Бесплатно (Personal), от $2200/год (Pro)</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key" data-i18n="engine.platforms">Платформы экспорта</span>
+                    <span class="specs__value">Windows, macOS, Linux, Android, iOS, Web, консоли</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key" data-i18n="engine.difficulty">Сложность</span>
+                    <span class="specs__value" data-i18n="engine.diffMedium">Средняя</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Плюсы и минусы -->
+        <div class="engine-block">
+            <h2 class="engine-block__title" data-i18n="engine.proscons">Плюсы и минусы</h2>
+            <div class="proscons">
+                <div class="proscons__col proscons__col--pros">
+                    <h3 data-i18n="engine.pros">Плюсы</h3>
+                    <ul>
+                        <li data-i18n="unity.pro.1">Огромное сообщество и много обучающих материалов</li>
+                        <li data-i18n="unity.pro.2">Asset Store с тысячами готовых ассетов</li>
+                        <li data-i18n="unity.pro.3">Поддержка всех популярных платформ</li>
+                        <li data-i18n="unity.pro.4">Бесплатная версия для небольших проектов</li>
+                    </ul>
+                </div>
+                <div class="proscons__col proscons__col--cons">
+                    <h3 data-i18n="engine.cons">Минусы</h3>
+                    <ul>
+                        <li data-i18n="unity.con.1">Большой размер сборки по сравнению с лёгкими движками</li>
+                        <li data-i18n="unity.con.2">Сложная система рендеринга для новичков</li>
+                        <li data-i18n="unity.con.3">Плавающая производительность на слабых устройствах</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Примеры игр -->
+        <div class="engine-block">
+            <h2 class="engine-block__title" data-i18n="engine.games">Известные игры на Unity</h2>
+            <div class="games-list">
+                <span class="game-tag">Hollow Knight</span>
+                <span class="game-tag">Cuphead</span>
+                <span class="game-tag">Among Us</span>
+                <span class="game-tag">Ori and the Blind Forest</span>
+                <span class="game-tag">Genshin Impact</span>
+                <span class="game-tag">Escape from Tarkov</span>
+            </div>
+        </div>
+
+        <!-- Ссылка на офсайт -->
+        <div class="engine-block engine-block--center">
+            <a href="https://unity.com" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="engine.official">
+                Официальный сайт
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= ПОДВАЛ ================= -->
+<footer class="footer">
+    <div class="container">
+        <p data-i18n="footer.text">LowLen1y.gg — учебный проект по МДК 02.01</p>
+        <p class="footer__small">© 2025 LowLen1y.gg</p>
+    </div>
+</footer>
+
+<script src="../js/lang.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
